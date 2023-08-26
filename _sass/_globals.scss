@@ -15,8 +15,16 @@ $accent-600: #9FA98B;
 $font-primary: 'Rokkitt', serif;
 $font-accent: 'Roboto', sans-serif;
 
+/* Gaps */
+$gap: 2rem;
+
+// Z-index
+$bottom: 0;
+$middle: 1;
+$top: 2;
+
 /* Global */
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -24,4 +32,41 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.section__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-block: $gap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: $gap;
+}
+
+.section__heading {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+    & p {
+        $spacing: .25rem;
+        margin: 0;
+        font-family: $font-accent;
+        font-size: 1rem;
+        color: $secondary-600;
+        text-transform: uppercase;
+        letter-spacing: $spacing;
+        word-spacing: 2 * $spacing;
+    }
+
+    & h1, & h2 {
+        margin: 0;
+        font-size: 4rem;
+        font-weight: 400;
+
+        & span {
+            font-weight: 500;
+        }
+    }
 }
