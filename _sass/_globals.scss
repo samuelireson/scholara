@@ -23,6 +23,13 @@ $bottom: 0;
 $middle: 1;
 $top: 2;
 
+// Breakpoints
+$screen-xs: 450px;
+$screen-sm: 600px;
+$screen-md: 800px;
+$screen-lg: 1000px;
+$screen-xl: 1200px;
+
 /* Global */
 html {
     scroll-behavior: smooth;
@@ -32,11 +39,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+a {
+    text-decoration: none;
 }
 
 .section__container {
     width: 90%;
-    max-width: 1200px;
+    max-width: $screen-xl;
     margin: 0 auto;
     padding-block: $gap;
     display: grid;
