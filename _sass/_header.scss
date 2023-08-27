@@ -21,6 +21,7 @@
         font-size: 3rem;
         cursor: pointer;
         display: none;
+        color: $secondary-600;
     }
 }
 .primary-header__nav {
@@ -52,15 +53,17 @@
 }
 @media (max-width: $screen-md) {
     .primary-header {
-
         &__nav {
             position: absolute;
             top: 100%;
-            right: 0;
-            width: 0;
+            left: 0;
+            width: 100%;
+            padding-block: $gap;
             flex-direction: column;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
-            transition: width .2s ease;
+            transform-origin: 50% 0;
+            transform: scaleY(0);
+            transition: transform .2s ease;
         }
 
         &__icons {
@@ -73,17 +76,20 @@
                 display: none;
             }
         }
+    }
+    .primary-header:has(input:checked) {
+        box-shadow: none;
 
-        &__input:checked~&__icons {
+        .primary-header__nav {
+            transform: scaleY(1);
+        }
+        .primary-header__icons {
             #menu-icon {
                 display: none;
             }
             #close-icon {
                 display: block;
             }
-        }
-        &__input:checked~&__nav {
-            width: 100%;
         }
     }
 }
