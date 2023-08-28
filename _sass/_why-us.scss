@@ -1,0 +1,14 @@
+.why-us-hero {
+    .section__heading {
+        grid-column: span 6;
+        text-align: center;
+    }
+    .review-card {
+        grid-column: span 2;
+        padding: $gap;
+
+        &__img {
+            width: 80%;
+        }
+    }
+}

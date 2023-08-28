@@ -58,7 +58,7 @@ a {
     text-decoration: none;
 }
 
-p {
+p, blockquote {
     margin: 0;
 }
 
@@ -107,7 +107,16 @@ p {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap;
     border: 2px solid $primary-600;
     border-radius: 5px;
-    
+    box-shadow: 2px 2px 0px $primary-600;
+    transition: all .2s ease;
+
+    &:hover {
+        box-shadow: 0px 0px 0px $primary-600;
+    }
 }
