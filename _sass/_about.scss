@@ -1,0 +1,29 @@
+.about-banner {
+    background-image: $primary-gradient;
+
+    &__item {
+        grid-column: span 2;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+
+        &-title {
+            font-size: 2rem;
+        }
+    }
+}
+@media (max-width: $screen-md) {
+    .about-banner__item {
+        grid-column: span 3;
+        &:last-child {
+            grid-column: 2/6;
+        }
+    }
+}
+@media (max-width: $screen-xs) {
+    .about-banner__item {
+        grid-column: span 6;
+    }
+}
