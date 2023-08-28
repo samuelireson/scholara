@@ -1,0 +1,37 @@
+.home-hero {
+    &__content {
+        grid-column: 1 / span 4;
+
+        & p.home-hero__description {
+            width: 80%;
+        }
+    }
+    & #home-hero__img {
+        grid-column: 5 / span lastline;
+        background-image: url(/assets/images/home_image.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+@media (max-width: $screen-md) {
+    .home-hero {
+        &__content {
+            grid-column: 1 / lastline;
+            text-align: center;
+
+            & p.home-hero__description {
+                margin-inline: auto;
+            }
+        }
+        & #home-hero__img {
+            grid-column: 2 / span 4;
+            height: 300px;
+        }
+    }
+}
+@media (max-width: $screen-xs) {
+    #home-hero__img {
+        display: none;
+    }
+}

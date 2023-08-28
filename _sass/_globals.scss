@@ -10,6 +10,7 @@ $secondary-400: #8783B5;
 $secondary-500: #726DA8;
 $secondary-600: #615D8F;
 $accent-600: #9FA98B;
+$primary-gradient: linear-gradient($primary-300, $primary-500);
 
 /* Fonts */
 $font-primary: 'Rokkitt', serif;
@@ -34,16 +35,31 @@ $screen-xl: 1200px;
 html {
     scroll-behavior: smooth;
 }
+@media (max-width: $screen-sm) {
+    html {
+        font-size: 14px;
+
+    }
+}
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-primary;
+    color: $primary-500;
+}
+
+main {
+    z-index: 0;
 }
 
 a {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
 }
 
 .section__container {
@@ -54,12 +70,19 @@ a {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: $gap;
+
+    .image {
+        width: 100%;
+        border: 5px solid $accent-600;
+        border-radius: 10px;
+    }
 }
 
 .section__heading {
     display: flex;
     flex-direction: column;
     height: fit-content;
+    width: 100%;
 
     & p {
         $spacing: .25rem;
