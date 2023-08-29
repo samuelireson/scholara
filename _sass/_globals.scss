@@ -34,6 +34,7 @@ $screen-xl: 1200px;
 /* Global */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 @media (max-width: $screen-sm) {
     html {
