@@ -1,0 +1,9 @@
+.benefit-banner {
+    background-image: $primary-gradient;
+    &__benefit {
+        grid-column: 1 / -1;
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
